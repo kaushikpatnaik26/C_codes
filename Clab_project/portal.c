@@ -5,9 +5,9 @@ int main() {
     int attendance; 
     int midsem_mark; 
     int quiz_tests_attempted; 
-    int quiz_marks[10]; 
+    int quiz_marks[5]; 
     int assignment_submitted; 
-    int assignment_marks[10]; 
+    int assignment_marks[5]; 
     int end_sem;
     int lab;
     int external;
@@ -32,7 +32,7 @@ int main() {
     for (int i = 0; i < quiz_tests_attempted; i++) {
         printf("Enter marks scored in quiz %d out of 5: ", i+1); 
         scanf("%d", &quiz_marks[i]); 
-        internal_marks += (quiz_marks[i])/quiz_tests_attempted; 
+        internal_marks += (quiz_marks[i])/5; 
     }
     
     printf("Enter number of assignments submitted out of 5: ");
