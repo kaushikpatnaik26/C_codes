@@ -1,5 +1,5 @@
 #include <stdio.h>
-void sortarr(int a[], int size)
+void sortarr(int a[], int size) 
 {
     for (int i = 0; i < size - 1; i++)
     {
@@ -14,13 +14,27 @@ void sortarr(int a[], int size)
         }
     }
 }
+void printarr(int a[], int size) 
+{
+    for(int i=0; i< size; i++)
+    {
+        printf("%d ", a[i]);
+    }
+}
 int main()
 {
     int a[] = {2, 1, 3, 1, 4, 6, 5, 7, 8};
     int size = sizeof(a) / sizeof(a[0]);
+
+    printf("The entered array: ");
+    printarr(a,size);
+
     sortarr(a, size);
 
-    printf("Printing odd number ahead of even: ");
+    printf("\nSorted array : ");
+    printarr(a,size);
+
+    printf("\nPrinting odd number ahead of even: ");
 
     for (int i = 0; i < size ; i++)
         {
@@ -37,6 +51,5 @@ int main()
         }
         
     }
-    
     return 0;
 }
